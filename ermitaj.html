@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Императрицы 2026</title>
+    
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ScrollReveal для анимаций скролла -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#224F9A',
+                        'brand-light-blue': '#C7DCFF',
+                    },
+                    fontFamily: {
+                        'ekaterina': ['"Ekaterina Velikaya One"', 'serif'],
+                        'kuhlenbach': ['"Kuhlenbach"', 'serif'],
+                        'petrovsky': ['"PetrovskyOneC"', 'serif'],
+                        // Фоллбэки для красивой типографики
+                        'display': ['"Playfair Display"', 'serif'],
+                        'body': ['"Cormorant Garamond"', 'serif'],
+                        'header-fallback': ['"Rubik Wet Paint"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Базовые стили */
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* Специальный класс для гарантированной анимации карточек */
+        .guaranteed-card-animation {
+            transition: all 0.3s ease-in-out !important;
+        }
+
+        /* Движение и увеличение всей карточки при наведении */
+        .guaranteed-card-animation:hover {
+            transform: translateY(-12px) scale(1.02) !important;
+            box-shadow: 0 20px 40px rgba(34, 79, 154, 0.25) !important;
+            background-color: #F5F9FF !important;
+        }
+
+
+    </style>
+</head>
+<body class="antialiased text-gray-800 font-body">
+
+    <!-- HEADER -->
+    <header class="relative bg-brand-blue text-white pt-8 pb-4 text-center bg-pattern-top overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex justify-between items-center reveal-top">
+                <img src="logo_ermitazh.svg" alt="Эрмитаж" class="h-8 md:h-10 w-auto object-contain">
+                <div class="font-ekaterina text-xl opacity-80">Петровская ассамблея 2026</div>
+                <a href="#" class="bg-white text-brand-blue px-4 py-1 rounded-full text-base font-kuhlenbach transition-all duration-300 hover:bg-[#C7DCFF] hover:bg-opacity-50 hover:text-white">Об организаторе</a>
+            </div>
+        </div>
+        
+    </header>
+    <!-- СЕКЦИЯ 1: Дата -->
+    <section class="relative bg-brand-blue text-white text-center overflow-hidden">
+        
+        <img src="plitka_kheder.svg" alt="Паттерн плитки" class="w-full h-auto block z-0 pointer-events-none">
+
+        <div class="absolute inset-0 z-10 flex flex-col items-center justify-center container mx-auto px-4">
+            <div class="reveal-date">
+                <h1 class="font-petrovsky text-7xl md:text-8xl leading-none mb-2 pt-4">29-30</h1>
+                <p class="font-kuhlenbach text-2xl uppercase tracking-widest text-brand-light-blue">августа</p>
+            </div>
+        </div>
+        
+    </section>
+    <!-- INTRO SECTION -->
+    <section class="py-20 bg-brand-blue text-center relative">
+        <div class="container mx-auto max-w-5xl px-2 reveal-up">
+            <h2 class="font-ekaterina text-4xl md:text-6xl text-white mb-8">
+                <span class="block mb-12">Дорогой друг!</span>
+                <span class="block">Рады видеть вас на нашем мероприятии!</span>
+            </h2>
+            <div class="font-kuhlenbach text-lg md:text-2xl/6 text-white space-y-4 px-32">
+                <p>«Петровская ассамблея 2026» — тема площадки Государственного Эрмитажа в рамках семейного фестиваля «Открытый урок».</p>
+                <p>На встрече вы сможете узнать много нового и интересного<br>в эпоху Петра I с помощью игр, мастер-классов и викторин.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PETER THE GREAT ERA -->
+    <section class="py-32 bg-[#C7DCFF] bg-opacity-50 text-brand-blue text-center relative">
+        <div class="container mx-auto max-w-3xl px-4 reveal-up">
+            <h2 class="font-ekaterina text-4xl md:text-6xl mb-8">Эпоха Петра I</h2>
+            <p class="font-kuhlenbach text-lg md:text-2xl/6 space-y-4 px-12">
+                Эпоха Петра I (1696–1725) стала временем коренного перелома, когда Московское царство стало Российской империей. Этот период характеризовался активной модернизацией всех сфер жизни — от военного дела до внешнего облика подданных.
+            </p>
+        </div>
+    </section>
+    <img src="plitka_pod_opisaniem_epokhi.svg" alt="Паттерн плитки" class="w-full h-auto block z-0">
+    <!-- SITE OF INTERACTION (CARDS) -->
+    <section class="py-24 bg-brand-blue relative">
+
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="font-ekaterina text-4xl md:text-6xl text-white text-center mb-16 reveal-up">Предстоящие мероприятия</h2>
+            
+            <!-- Grid Card -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">Монополия</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Настольная игра-путешествие по владениям и торговым путям петровской России.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">Ассамблеи</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Светские собрания и танцы по правилам, введённым Петром I для дворянского досуга.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">УРОКИ ПИСЬМА</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Учимся выводить буквы гусиным пером по прописям начала XVIII века.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">ЯЗЫК ЭПОХИ ПЕТРА I</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Разбираем слова и обороты, вошедшие в русский язык при Петре Великом.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">НАУКА О ВРАЧЕВАНИИ</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Первые аптеки и госпитали России — медицина петровского времени.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">МИФ ИЛИ РЕАЛЬНОСТЬ</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Викторина: отделяем исторические факты о Петре I от легенд и домыслов.</p>
+                </div>
+                
+                <!-- Card 7 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">ЯЗЫК ВЕЕРОВ И МУШЕК</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Тайная символика дамских аксессуаров придворного этикета.</p>
+                </div>
+                
+                <!-- Card 8 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">КУЛИНАРИЯ НАЧАЛА XVIII ВЕКА</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Мастер-класс по блюдам и застольным традициям петровского двора.</p>
+                </div>
+                
+                <!-- Card 9 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-left reveal-card guaranteed-card-animation">
+                    <h3 class="font-petrovsky text-2xl text-brand-blue mb-4 uppercase">ЭКЗАМЕН НА ДВОРЯНСКИЙ ТИТУЛ</h3>
+                    <p class="font-kuhlenbach text-lg md:text-2xl/6 text-brand-blue leading-relaxed">Испытание манер, этикета и знаний — по образцу петровских экзаменов для дворян.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP & GAME SECTION -->
+    <section class="pt-24 text-center relative bg-[#C7DCFF] bg-opacity-50">
+        <div class="container mx-auto max-w-4xl px-24 reveal-up">
+            <h2 class="font-ekaterina text-4xl md:text-6xl text-brand-blue mb-8">Наука о врачевании</h2>
+            <div class="font-kuhlenbach text-brand-blue text-lg md:text-2xl/6 mb-24 space-y-4">
+                <p>Интерактивная игра «Наука о врачевании при Петре I» приглашает вас погрузиться в атмосферу зарождения российской медицины прямо на аллеях Летнего сада. В основе игры лежат реальные исторические хроники, методы лечения недугов XVIII века и рецепты петровского «Аптекарского огорода». Задача участников — примерить на себя роль лекарей той эпохи: исследовать территорию сада в поисках целебных трав и растений, поставить верные диагнозы и спасти пациентов. На игровых точках вас встретят актеры
+в образах знаменитых личностей петровского Петербурга — от соратников императора до его личного лейб-медика Роберта Эрскина, которые поделятся медицинскими тайнами и проверят ваши знания перед строгим судом Медицинской канцелярии.</p>
+            </div>
+        </div>
+        
+        <!-- Карта -->
+        <img src="karta_1.svg" alt="Карта Петербурга" class="w-full h-auto block z-0">  
+            <!-- Стилизованная полоса с текстом (и текстурой) -->
+            <div class="w-full py-8 px-4 flex justify-around text-white font-petrovsky text-lg flex-wrap gap-4 reveal-up relative">
+                <div class="absolute inset-0 bg-brand-blue"></div>
+                
+                <a href="#" class="relative z-10 transition-all duration-300 hover:-translate-y-1 hover:text-[#C7DCFF]">О МУЗЕЕ</a>
+                <a href="#" class="relative z-10 transition-all duration-300 hover:-translate-y-1 hover:text-[#C7DCFF]">ДЛЯ СМИ</a>
+                <a href="#" class="relative z-10 transition-all duration-300 hover:-translate-y-1 hover:text-[#C7DCFF]">КОНТАКТЫ</a>
+                <a href="#" class="relative z-10 transition-all duration-300 hover:-translate-y-1 hover:text-[#C7DCFF]">ДОСТУПНЫЙ ЭРМИТАЖ</a>
+            </div>
+        
+
+    </section>
+
+    <!-- FOOTER (Pattern) -->
+    <footer class="relative bg-brand-blue text-white text-center overflow-hidden">
+        <img src="plitka_kheder.svg" alt="Паттерн плитки" class="w-full h-auto block z-0 pointer-events-none">
+
+        <!-- Контент, который будет поверх паттерна -->
+        <div class="absolute inset-0 z-10 flex flex-col items-center justify-center container mx-auto px-4">
+            <h1 class="font-ekaterina text-2xl md:text-4xl leading-none mb-2 pt-4">Петровская ассамблея<br>2026</h1>
+        </div>
+    </footer>
+
+    <script>
+        // Инициализация ScrollReveal
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            delay: 200,
+            reset: false // Чтобы анимация срабатывала только один раз при загрузке
+        });
+
+        // Применяем к разным блокам с разными задержками
+        
+        // Дата в хедере
+        sr.reveal('.reveal-date', { 
+            origin: 'top', 
+            distance: '30px', 
+            duration: 1200,
+            delay: 300 
+        });
+        
+        // Элементы навигации хедера
+        sr.reveal('.reveal-top', { 
+            origin: 'top', 
+            duration: 1000,
+            delay: 100,
+            interval: 200
+        });
+
+        // Появление текстовых блоков
+        sr.reveal('.reveal-up', { 
+            interval: 200,
+            duration: 1200
+        });
+
+        // Появление карточек с задержкой (каскад)
+        sr.reveal('.reveal-card', { 
+            interval: 150, 
+            duration: 800,
+            scale: 0.95
+        });
+    </script>
+</body>
+</html>
