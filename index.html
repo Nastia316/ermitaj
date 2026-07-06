@@ -83,10 +83,25 @@
     <!-- HEADER -->
     <header class="relative bg-brand-blue text-white pt-8 pb-4 text-center bg-pattern-top overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
-            <div class="flex justify-between items-center reveal-top">
-                <a href="https://www.hermitagemuseum.org/"> <img src="logo_ermitazh.svg" alt="Эрмитаж" class="h-8 md:h-10 w-auto object-contain"></a>
-                <div class="font-ekaterina text-xl opacity-80">Петровская ассамблея 2026</div>
-                <a href="https://edu.hermitage.ru/catalogs/1422148457/themes/1422148482/article/1422148486" class="bg-white text-brand-blue px-4 py-1 rounded-full text-base font-kuhlenbach transition-all duration-300 hover:bg-[#C7DCFF] hover:bg-opacity-50 hover:text-white">Об организаторе</a>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-y-2 reveal-top w-full">
+                <div class="flex w-full sm:w-auto justify-between sm:justify-start items-center gap-x-4 order-1 sm:order-1">
+                    <a href="https://www.hermitagemuseum.org/">
+                        <img src="logo_ermitazh.svg" alt="Эрмитаж" class="h-8 md:h-10 w-auto object-contain">
+                    </a>
+
+                    <a href="https://edu.hermitage.ru/catalogs/1422148457/themes/1422148482/article/1422148486" class="bg-white text-brand-blue px-4 py-1 rounded-full text-base font-kuhlenbach transition-all duration-300 hover:bg-[#C7DCFF] hover:bg-opacity-50 hover:text-white sm:hidden">
+                        Об организаторе
+                    </a>
+                </div>
+
+                <div class="font-ekaterina text-base sm:text-xl opacity-80 text-center w-full sm:flex-1 order-3 sm:order-2">
+                    Петровская ассамблея 2026
+                </div>
+
+                <a href="https://edu.hermitage.ru/catalogs/1422148457/themes/1422148482/article/1422148486" class="bg-white text-brand-blue px-4 py-1 rounded-full text-base font-kuhlenbach transition-all duration-300 hover:bg-[#C7DCFF] hover:bg-opacity-50 hover:text-white hidden sm:block order-2 sm:order-3">
+                    Об организаторе
+                </a>
+
             </div>
         </div>
         
@@ -94,7 +109,10 @@
     <!-- СЕКЦИЯ 1: Дата -->
     <section class="relative bg-brand-blue text-white text-center overflow-hidden">
         
-        <img src="plitka_kheder.svg" alt="Паттерн плитки" class="w-full h-auto block z-0 pointer-events-none">
+        <div class="w-full overflow-hidden z-0 pointer-events-none">
+            <img src="plitka_kheder.svg" alt="Паттерн плитки" class="w-full h-auto hidden md:block">
+            <img src="plitka_kheder.svg" alt="Паттерн плитки" class="h-[468px] w-auto mx-auto block md:hidden object-none">
+        </div>
 
         <div class="absolute inset-0 z-10 flex flex-col items-center justify-center container mx-auto px-4">
             <div class="reveal-date">
@@ -107,11 +125,11 @@
     <!-- INTRO SECTION -->
     <section class="py-20 bg-brand-blue text-center relative">
         <div class="container mx-auto max-w-5xl px-2 reveal-up">
-            <h2 class="font-ekaterina text-4xl md:text-6xl text-white mb-8">
+            <h2 class="font-ekaterina text-4xl md:text-6xl text-white mb-12 md:mb-8">
                 <span class="block mb-12">Дорогой друг!</span>
                 <span class="block">Рады видеть вас на нашем мероприятии!</span>
             </h2>
-            <div class="font-kuhlenbach text-lg md:text-2xl/6 text-white space-y-4 px-32">
+            <div class="font-kuhlenbach text-lg md:text-2xl/6 text-white space-y-4 px-4 md:px-32">
                 <p>«Петровская ассамблея 2026» — тема площадки Государственного Эрмитажа в рамках семейного фестиваля «Открытый урок».</p>
                 <p>На встрече вы сможете узнать много нового и интересного<br>в эпоху Петра I с помощью игр, мастер-классов и викторин.</p>
             </div>
@@ -121,13 +139,16 @@
     <!-- PETER THE GREAT ERA -->
     <section class="py-32 bg-[#C7DCFF] bg-opacity-50 text-brand-blue text-center relative">
         <div class="container mx-auto max-w-3xl px-4 reveal-up">
-            <h2 class="font-ekaterina text-4xl md:text-6xl mb-8">Эпоха Петра I</h2>
+            <h2 class="font-ekaterina text-4xl md:text-6xl mb-12 md:mb-8">Эпоха Петра I</h2>
             <p class="font-kuhlenbach text-lg md:text-2xl/6 space-y-4 px-12">
                 Эпоха Петра I (1696–1725) стала временем коренного перелома, когда Московское царство стало Российской империей. Этот период характеризовался активной модернизацией всех сфер жизни — от военного дела до внешнего облика подданных.
             </p>
         </div>
     </section>
-    <img src="plitka_pod_opisaniem_epokhi.svg" alt="Паттерн плитки" class="w-full h-auto block z-0">
+    <div class="w-full overflow-hidden z-0">
+        <img src="plitka_pod_opisaniem_epokhi.svg" alt="Паттерн плитки" class="w-full h-auto hidden md:block">
+        <img src="plitka_pod_opisaniem_epokhi.svg" alt="Паттерн плитки" class="h-[229px] w-auto mx-auto block md:hidden object-none">
+    </div>
     <!-- SITE OF INTERACTION (CARDS) -->
     <section class="py-24 bg-brand-blue relative">
 
@@ -197,8 +218,8 @@
 
     <!-- MAP & GAME SECTION -->
     <section class="pt-24 text-center relative bg-[#C7DCFF] bg-opacity-50">
-        <div class="container mx-auto max-w-4xl px-24 reveal-up">
-            <h2 class="font-ekaterina text-4xl md:text-6xl text-brand-blue mb-8">Наука о врачевании</h2>
+        <div class="container mx-auto max-w-4xl px-8 md:px-24 reveal-up">
+            <h2 class="font-ekaterina text-4xl md:text-6xl text-brand-blue mb-12 md:mb-8">Наука о врачевании</h2>
             <div class="font-kuhlenbach text-brand-blue text-lg md:text-2xl/6 mb-24 space-y-4">
                 <p>Интерактивная игра «Наука о врачевании при Петре I» приглашает вас погрузиться в атмосферу зарождения российской медицины прямо на аллеях Летнего сада. В основе игры лежат реальные исторические хроники, методы лечения недугов XVIII века и рецепты петровского «Аптекарского огорода». Задача участников — примерить на себя роль лекарей той эпохи: исследовать территорию сада в поисках целебных трав и растений, поставить верные диагнозы и спасти пациентов. На игровых точках вас встретят актеры
 в образах знаменитых личностей петровского Петербурга — от соратников императора до его личного лейб-медика Роберта Эрскина, которые поделятся медицинскими тайнами и проверят ваши знания перед строгим судом Медицинской канцелярии.</p>
@@ -222,7 +243,10 @@
 
     <!-- FOOTER (Pattern) -->
     <footer class="relative bg-brand-blue text-white text-center overflow-hidden">
-        <img src="plitka_kheder.svg" alt="Паттерн плитки" class="w-full h-auto block z-0 pointer-events-none">
+        <div class="w-full overflow-hidden z-0 pointer-events-none">
+            <img src="plitka_kheder.svg" alt="Паттерн плитки" class="w-full h-auto hidden md:block">
+            <img src="plitka_kheder.svg" alt="Паттерн плитки" class="h-[468px] w-auto mx-auto block md:hidden object-none">
+        </div>
 
         <!-- Контент, который будет поверх паттерна -->
         <div class="absolute inset-0 z-10 flex flex-col items-center justify-center container mx-auto px-4">
